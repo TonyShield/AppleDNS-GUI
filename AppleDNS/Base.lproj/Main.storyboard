@@ -97,14 +97,14 @@
                                     <constraint firstAttribute="width" constant="71" id="Awl-BT-No8"/>
                                     <constraint firstAttribute="height" constant="21" id="viH-Ru-Sxa"/>
                                 </constraints>
-                                <popUpButtonCell key="cell" type="push" title="merlin" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="dqE-Zn-LlI" id="Xek-tO-Aor">
+                                <popUpButtonCell key="cell" type="push" title="surge" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="bDO-IA-55w" id="Xek-tO-Aor">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="K5z-Ig-GQj">
                                         <items>
-                                            <menuItem title="surge" id="bDO-IA-55w"/>
+                                            <menuItem title="surge" state="on" id="bDO-IA-55w"/>
                                             <menuItem title="hosts" id="ows-bO-hwq"/>
-                                            <menuItem title="merlin" state="on" id="dqE-Zn-LlI"/>
+                                            <menuItem title="merlin" id="dqE-Zn-LlI"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
@@ -144,11 +144,11 @@
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-qN-yl6">
                                 <rect key="frame" x="20" y="20" width="440" height="189"/>
                                 <clipView key="contentView" id="uHc-D1-b43">
-                                    <rect key="frame" x="1" y="1" width="438" height="187"/>
+                                    <rect key="frame" x="1" y="1" width="423" height="187"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uEE-sD-hcP">
-                                            <rect key="frame" x="0.0" y="0.0" width="438" height="187"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="423" height="187"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="423" height="187"/>

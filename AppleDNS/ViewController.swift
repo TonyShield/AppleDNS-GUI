@@ -25,8 +25,6 @@ class ViewController: NSViewController {
     }
     @IBAction func cleanDNSCache(sender: AnyObject) {
         
-
-        cleanDNS()
         
         
     }
@@ -42,7 +40,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         runButton.enabled = false
-//        cleanDNSCacheButton.enabled = false
+        cleanDNSCacheButton.enabled = false
         downloadFiles = DownloadFiles()
         downloadFilesHandle()
 
@@ -84,7 +82,6 @@ class ViewController: NSViewController {
             text += str + "\n"
             dispatch_async(dispatch_get_main_queue(), {
                 self.text.string = text
-                self.text.scrollRangeToVisible(NSMakeRange((self.text.string?.characters.count)!, 0))
             })
             
         }
@@ -112,52 +109,5 @@ class ViewController: NSViewController {
 
     }
     
-    
-    
-    
-    func cleanDNS() {
-        
-        
-        if (floor(NSAppKitVersionNumber) <= Double( NSAppKitVersionNumber10_9)) {
-            /* On a 10.9.x or earlier system */
-        } else if (floor(NSAppKitVersionNumber) <= Double(NSAppKitVersionNumber10_10)) {
-            /* On a 10.10 system */
-        } else if (floor(NSAppKitVersionNumber) <= Double(NSAppKitVersionNumber10_10_Max)) {
-            /* on a 10.10.x system */
-            
-        } else {
-            /* 10.11 or later system */
-        }
-        
-        
-        switch floor(NSAppKitVersionNumber) {
-        case Double(NSAppKitVersionNumber10_10)...Double(NSAppKitVersionNumber10_10_3):
-            doScriptWithAdmin("sudo discoveryutil mdnsflushcache")
-        case 0..<Double(NSAppKitVersionNumber10_10): break
-        default:
-            doScriptWithAdmin("sudo killall -HUP mDNSResponder")
-        }
-        
-    }
-    
-    
-    func doScriptWithAdmin(inScript: String){
-        let script = "do shell script \"\(inScript)\" with administrator privileges"
-        let appleScript = NSAppleScript(source: script)!
-        let text = appleScript.executeAndReturnError(nil)
-        
-        if let str = text.stringValue {
-            
-            if str == "" {
-                cleanDNSCacheButton.title = "清理成功"
-            } else {
-                cleanDNSCacheButton.title = "出现一些问题"
-                self.text.string = "\(str)"
-            }
-        }
-        
-    }
-
-
 }
 

@@ -128,16 +128,7 @@ class DownloadFiles: NSObject {
             }
             
             task.launch()
-            
-            
-            
         }
-        
-
-        
-
-        
-
     }
     
     
