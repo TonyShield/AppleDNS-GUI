@@ -95,10 +95,7 @@ class DownloadFiles: NSObject {
             }
             
         }
-        
-
-        
-        
+             
     }
     
     
